@@ -1,2 +1,2 @@
 # JavaTelegramImageFinderBot
-Bot that helps to find user define type pictures
+Bot that helps to find user defined type pictures
