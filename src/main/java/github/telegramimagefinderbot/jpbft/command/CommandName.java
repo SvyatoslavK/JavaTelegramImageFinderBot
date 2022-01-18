@@ -9,9 +9,7 @@ public enum CommandName {
     PICTURE("/getpicture"),
     HELP("/help"),
     STATS("/stats"),
-
     NO_COMMAND(""),
-
     LISTSITESSUB("/listSitesSub"),
     ADDSITESUB("/addSiteSub "),
     REMOVESITESSUB("/removeSitesSub"),
