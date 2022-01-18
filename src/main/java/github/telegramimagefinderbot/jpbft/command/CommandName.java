@@ -10,6 +10,8 @@ public enum CommandName {
     HELP("/help"),
     STATS("/stats"),
 
+    NO_COMMAND(""),
+
     LISTSITESSUB("/listSitesSub"),
     ADDSITESUB("/addSiteSub "),
     REMOVESITESSUB("/removeSitesSub"),
