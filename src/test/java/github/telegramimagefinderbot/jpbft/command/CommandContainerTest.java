@@ -1,3 +1,5 @@
+package github.telegramimagefinderbot.jpbft.command;
+
 import github.telegramimagefinderbot.jpbft.command.Command;
 import github.telegramimagefinderbot.jpbft.command.CommandContainer;
 import github.telegramimagefinderbot.jpbft.command.CommandName;
@@ -26,10 +28,10 @@ public class CommandContainerTest {
     public void successCCExist()
     {
         Arrays.stream(CommandName.values())
-                .forEach(commandName ->
-                {Command command = commandContainer.retrieveCommand(commandName.getCommandName());
-                    Assertions.assertNotEquals(UnknownCommand.class, command.getClass());
-                } );
+                .forEach(commandName -> {
+                    Command command = commandContainer.retrieveCommand(commandName.getCommandName());
+                    Assertions.assertNotEquals(UnknownCommand.class.getClass(), command.getClass());
+                });
 
     }
 

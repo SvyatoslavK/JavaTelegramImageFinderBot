@@ -9,11 +9,10 @@ public enum CommandName {
     PICTURE("/getpicture"),
     HELP("/help"),
     STATS("/stats"),
-    NO_COMMAND(""),
+    NO_COMMAND("nocommand"),
     LISTSITESSUB("/listSitesSub"),
     ADDSITESUB("/addSiteSub "),
     REMOVESITESSUB("/removeSitesSub"),
-
     POST("/post") /*for posting images to the channel */,
     DISLIKE("/dislike")/*for rejecting posting to the channel */;
 
