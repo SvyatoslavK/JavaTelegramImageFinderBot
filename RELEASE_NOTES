@@ -4,3 +4,14 @@
 
 *   added stub telegram bot
 *   added SpringBoot skeleton project
+
+## 0.1.3-SNAPSHOT
+
+* implement command pattern for bot commands
+* added unit-test system for the bot
+
+## 0.1.4 - SNAPSHOT
+
+* add deployment process to the project
+* replacename and  telegram token from yaml file
+* add docker, aplication-test yaml file

@@ -1,0 +1,5 @@
+bot:
+  username: 1
+  token: 1
+telegrambots:
+  enabled: false

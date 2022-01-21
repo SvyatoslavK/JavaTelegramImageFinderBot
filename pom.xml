@@ -10,17 +10,13 @@
 	</parent>
 	<groupId>github.telegramimagefinderbot</groupId>
 	<artifactId>java-telegram-bot</artifactId>
-	<version>0.1.2-SNAPSHOT</version>
+	<version>0.1.4-SNAPSHOT</version>
 	<name>java-telegram-bot</name>
 	<description>Java bot for Spring Boot</description>
 	<properties>
 		<java.version>11</java.version>
 	</properties>
 	<dependencies>
-		<!--<dependency>
-		<groupId>org.apache.logging.log4j</groupId>
-			<artifactId>log4j-to-slf4j</artifactId>
-		</dependency>-->
 		<dependency>
 			<groupId>org.telegram</groupId>
 			<artifactId>telegrambots-spring-boot-starter</artifactId>
