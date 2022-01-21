@@ -7,6 +7,7 @@ import github.telegramimagefinderbot.jpbft.command.impl.SendBotMessageImpl;
 import org.junit.jupiter.api.Test;
 import org.mockito.Mockito;
 import org.springframework.boot.test.context.SpringBootTest;
+import org.springframework.test.context.ActiveProfiles;
 import org.telegram.telegrambots.meta.api.methods.send.SendMessage;
 import org.telegram.telegrambots.meta.api.objects.Message;
 import org.telegram.telegrambots.meta.api.objects.Update;
@@ -16,6 +17,7 @@ import org.telegram.telegrambots.meta.exceptions.TelegramApiException;
  * Abstract class for test classes
  */
 @SpringBootTest
+@ActiveProfiles("test")
 abstract class AbstractCommandTest {
     protected JavaTelegramBot javaTelegramBot = Mockito.mock(JavaTelegramBot.class);
     protected SendBotMessage sendBotMessageTest = new SendBotMessageImpl(javaTelegramBot);
