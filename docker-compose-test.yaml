@@ -3,47 +3,44 @@ version: '3.8'
 services:
 
   jpbft:
-    container_name: telegram_pictures_bot
-    depends_on:
-      - database
     build:
       context: .
     environment:
-      - BOT_USERNAME=${BOT_USERNAME}
-      - BOT_TOKEN=${BOT_TOKEN}
+      - BOT_USERNAME=JavaTelegramImageFinder_bot
+      - BOT_TOKEN=5198520290:AAEtDCpb2VKhl6AifoXcLG1odp9FVHQ5fKQ
       - SPRING_DATASOURCE_URL=jdbc:postgresql://database:5432/nekodb
-      - SPRING_DATASOURCE_USERNAME=nekouser
-      - SPRING_DATASOURCE_PASSWORD=nekopassword
+      - SPRING_DATASOURCE_USERNAME=root
+      - SPRING_DATASOURCE_PASSWORD=root
       - SPRING_JPA_HIBERNATE_DDL_AUTO=update
     restart: always
     networks:
-    - nekonet
+      - nekonet
 
 
-#volume rm if you wanna switch USER/PASSWORD
   database:
-    container_name: database
     image: postgres:14
     restart: always
     environment:
-      POSTGRES_DB: nekodb
-      POSTGRES_USER: nekouser
-      POSTGRES_PASSWORD: nekopassword
+      POSTGRES_DB: 'nekodb'
+      POSTGRES_USER: 'nekouser'
+      POSTGRES_PASSWORD: 'nekopassword'
     ports:
       - '5432:5432'
     expose:
       - '5432'
+    depends_on:
+      - jpbft
     networks:
       - nekonet
 
+
   adminer:
-    container_name: adminer
     image: adminer
     restart: always
-    depends_on:
-      - database
     ports:
       - "8080:8080"
+    depends_on:
+      - jpbft
     networks:
       - nekonet
 

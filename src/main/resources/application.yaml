@@ -1,3 +1,28 @@
 bot:
   username: ${BOT_USERNAME}
   token: ${BOT_TOKEN}
+
+spring:
+  datasource:
+    driverClassName: org.postgresql.Driver
+    url: jdbc:postgresql://database:5432/nekodb
+    username: ${DBNAME}
+    password: ${PASSWORD}
+    initialization-mode: ALWAYS
+    schema: classpath*:database/initDB.sql
+    data: classpath*:database/populateDB.sql
+
+  flyway:
+    enabled: false
+
+  jpa:
+    database: POSTGRESQL
+    show-sql: false
+    hibernate:
+      ddl-auto: create-drop
+      naming:
+        implicit-strategy: org.hibernate.boot.model.naming.ImplicitNamingStrategyJpaCompliantImpl
+    properties:
+      hibernate:
+        format_sql: true
+
