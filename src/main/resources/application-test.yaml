@@ -3,3 +3,4 @@ bot:
   token: 1
 telegrambots:
   enabled: false
+
