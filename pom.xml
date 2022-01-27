@@ -10,7 +10,7 @@
     </parent>
     <groupId>github.telegramimagefinderbot</groupId>
     <artifactId>java-telegram-bot</artifactId>
-    <version>0.1.4-SNAPSHOT</version>
+    <version>0.1.5-SNAPSHOT</version>
     <name>java-telegram-bot</name>
     <description>Java bot for Spring Boot</description>
     <properties>
@@ -49,7 +49,6 @@
         <dependency>
             <groupId>org.postgresql</groupId>
             <artifactId>postgresql</artifactId>
-            <version>42.2.10</version>
         </dependency>
 
 
